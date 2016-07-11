@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Real Expert - HTML Template Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Real Expert&rdquo; Documentation by &ldquo;minimalthemes&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Real Expert -  HTML Template&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 12/03/2013<br>
+					By: <a href="http://themeforest.net/user/minimalthemes">minimalthemes</a><br>
+					Email: <a href="mailto:support@puriwp.com">Email me</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing this item, supporting our work. Please do not forget to rate our product.<br>
+			    We would be happy to see your comments and stars.</p>
+		  </div>
+	  </div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#cssFiles">HTML Structure</a></li>
+			<li><a href="#javascript">CSS Structure</a></li>
+			<li><a href="#psdFiles">Javascripts</a></li>
+			<li><a href="#other">Other details</a></li>
+			<li><a href="#htmlStructure">Uploading Template</a></li>
+			<li><a href="#used">Credits</a></li>
+			</ol>
+		
+		<hr>
+
+		<h3 id="cssFiles"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>
+			Real Expert is XHTML Strict template. It's made with Twitter Bootstrap CSS framework.  Almost every layout styling is covered by Bootstrap unless some layout that generally Bootstrap can't do.
+			This theme is a fluid layout with two columns. All of the information within the main content area is nested within a <code>&lt;section&gt;</code> with an id of "content". The sidebar's (column #2) content is within a <code>&lt;section&gt;</code> with an id of "sidebar". The general template structure is the same throughout the template. Here is the general structure.
+			<img src="assets/images/html-structure.png" alt="HTML Sructure" />
+		</p>
+		<p>
+			If you would like to edit the color, font, or style of any elements in one of these columns, you would do the following:
+			<br />
+			<pre>#primaryContent a {
+	color: #someColor;
+}</pre>
+	  If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more weight.<br />
+			I.E.<br />
+			<pre>#wrap #primaryContent a {
+	color: #someColor;
+}</pre>
+			<br />
+			So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.
+		</p>
+		
+		<h2>Header</h2>
+		<hr/>
+		<p>
+			<code>&lt;header id="header"&gt;</code> contains the site logo, contact information,and navigation bar. Editing <em>#site_logo</em>  you can easily change the home link and the logo image. <em>#contact_information</em> contains your email contact and telephone number. If you don't like to use it, remove this div.</p>
+		<h2>Navigation</h2>
+		<hr/>
+		<p>Site navigation is found in <code>&lt;nav id="nav-main" role="navigation"&gt;</code>. To create main meu items, add list elements with class nav. To add a submenu item create child list item with class &quot;dropdown-menu&quot; and don't forget to add &quot;dropdown&quot; class to parent list item.</p>
+	  <h3 id="javascript"><strong>B) CSS Structure</strong> - <a href="#toc">top</a></h3>
+		
+		<p>
+        	The following css files are used in every template html and php files. They can be found in the HEAD section of the page. Style.css is the template css file, the other one is twitter bootstrap and font-awesome css file.
+        <pre>&lt;head&gt;
+      &lt;meta charset="UTF-8" />
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+      &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /&gt;
+      &lt;meta name="description" content="" /&gt;
+      &lt;meta name="keyword" content="" /&gt;
+               <!------------------------------#Site Title#----------------------------->
+      &lt;title>Real Expert | Responsive Real Estate HTML Template &lt;/title>
+                <!----------------------------------------------------------------------->
+      &lt;link rel="shortcut icon" href="fav-ico.png" /&gt;
+      &lt;meta name='robots' content='noindex,nofollow' /&gt;
+      &lt;link rel='stylesheet' id='realexpert_bootstrap_main_css-css'  href='library/bootstrap/css/bootstrap.min.css' type='text/css' media='all' /&gt;
+      &lt;link rel='stylesheet' id='realexpert_bootstrap_responsive_css-css'  href='library/bootstrap/css/bootstrap-responsive.min.css' type='text/css' media='all' /&gt;
+      &lt;link rel='stylesheet' id='realexpert_font_awesome_css-css'  href='library/font-awesome/css/font-awesome.min.css' type='text/css' media='all' /&gt;
+      &lt;link rel='stylesheet' id='realexpert_font_awesome_css_ie7-css'  href='library/font-awesome/css/font-awesome-ie7.min.css' type='text/css' media='all' /&gt;
+      &lt;link rel='stylesheet' id='flexslider_css-css'  href='library/flexslider/flexslider.css' type='text/css' media='all' /&gt;
+      &lt;link rel='stylesheet' id='default-style-css'  href='style.css' type='text/css' media='all' /&gt;
+      &lt;script type='text/javascript' src='js/jquery.js?ver=1.10.2'> &lt;/script&gt;
+      &lt;script type='text/javascript' src='js/jquery-migrate.min.js?ver=1.2.1'> &lt;/script&gt;
+&lt;/head&gt;
+            </pre>
+        </p>
+	  <ul>
+		<li><strong>style.css</strong> - Main CSS for template, all main styles are here.</li>
+		<li>
+			<strong>stylesheets/</strong>
+			<ul>
+				<li><strong>bootstrap.min.css</strong> - Default styling for all basic HTML elements by Twitter Bootstrap</li>
+				<li><strong>bootstrap.min.reponsive.css</strong> - Default styling to control HTML elements in various screen width by Twitter Bootstrap</li>
+				<li><strong>flexslider.css</strong> - Styling script for Flexslider plugin by WooThemes</li>
+				<li><strong>font-awesome.min.css</strong> - Styling script to create iconic font by Font Awesome</li>
+			</ul>
+		</li>
+		
+		</ul>
+		</p>
+		
+		<hr>
+		
+		<h3 id="psdFiles"><strong>C) Javascripts</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This template requires the following javascript files. You should place them into the footer section in every template html files. The most important js file is the template script file (<strong>real-expert.js</strong>).</p>
+        <p><img src="assets/images/js.png" alt="JS File" width="824" height="286"></p>
+        <p>Contact-us.html and property-single.html requires 2 more js files to set a Google map. The first one is the map script, the second one is a plugin for easy map creating.            </p>
+        <p><img src="assets/images/js-map.png" alt="Map" width="1130" height="200"></p>
+  <hr>
+		
+		
+		<h3 id="other"><strong>E) Other Details </strong> - <a href="#toc">top</a></h3>
+		<p>
+		This template is not "finished" product, which means you will need to implement property search, property details, agents, blog, contact form and other, but everything is styled for you.
+		</p>
+		<hr>
+		
+		
+		
+		<h3 id="htmlStructure"><strong>F) Uploading Template</strong> - <a href="#toc">top</a></h3>
+		<p>Best way to upload template is if you use FTP program. I strongly recomment you to use <a href="http://filezilla-project.org/">Filezilla</a></p>
+		<p>Filezilla is available for PC and Mac and it's easy to use. We assume that you already have hosting, so open filezilla, login and find "public_html" folder. On some servers it is called "www" folder...that's folder where you need to upload all files</p>
+		<hr>
+		
+		
+		
+		<h3 id="htmlStructure"><strong>G) Credits and Sources</strong> - <a href="#toc">top</a></h3>
+		<p>During template development i used those javascript and graphic files:</p>
+		
+		<ul>
+			<li><a href="http://getbootstrap.com/2.3.2/">Twitter Bootstrap</a></li>
+			<li><a href="http://fortawesome.github.io/Font-Awesome/3.2.1/">Font Awesome</li>
+			<li><a href="http://flexslider.woothemes.com/">Flexslider</a></li>
+			<li><a href="http://sorgalla.com/jcarousel/">JCarousel</a></li>
+			<li><a href="http://mths.be/placeholder">JQuery Placeholder</a></li>
+			<li><a href="http://www.bulgaria-web-developers.com/projects/javascript/selectbox/">JQuery Select Box Plugin</a></li>
+			<li><a href="https://code.google.com/p/html5shiv/">HTML5Shiv</a></li>
+			<li><a href="https://github.com/scottjehl/Respond">Respond JS</a></li>
+			<li><a href="http://selectivizr.com/">selectivizr</a></li>
+		</ul>
+		
+		<hr>
+		<p class="append-bottom alt large"><strong>minimalthemes</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
